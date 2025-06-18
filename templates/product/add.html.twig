@@ -1,0 +1,23 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Add Product{% endblock %}
+
+{% block body %}
+    <h1>Add New Product</h1>
+
+    {# Start the form #}
+    {{ form_start(form) }}
+
+    {# Render each form field #}
+    {{ form_row(form.sku) }}
+    {{ form_row(form.name) }}
+    {{ form_row(form.description) }}
+    {{ form_row(form.price) }}
+    {{ form_row(form.dimensions) }}
+
+    {# Render the submit button #}
+    {{ form_row(form.save) }}
+
+    {# End the form #}
+    {{ form_end(form) }}
+{% endblock %}
